@@ -163,7 +163,6 @@ def manually_fill():
                     STUDENT_ENTRY.delete(first=0, last=22)
 
             def create_csv():
-                import csv
                 cursor.execute("select * from " + DB_table_name + ";")
                 csv_name = 'C:/Users/Admin/Desktop/Project/Face-Recognition-Attendance-System-main/Attendance/Manually Attendance/'+DB_table_name+'.csv'
                 with open(csv_name, "w") as csv_file:
@@ -175,8 +174,6 @@ def manually_fill():
                     Notifi.configure(text=O, bg="Green", fg="white",
                                      width=33, font=('times', 19, 'bold'))
                     Notifi.place(x=180, y=380)
-                import csv
-                import tkinter
                 root = tkinter.Tk()
                 root.title("Attendance of " + subb)
                 root.configure(background='grey80')
@@ -479,9 +476,6 @@ def subjectchoose():
 
                 cam.release()
                 cv2.destroyAllWindows()
-
-                import csv
-                import tkinter
                 root = tkinter.Tk()
                 root.title("Attendance of " + Subject)
                 root.configure(background='grey80')
@@ -548,8 +542,6 @@ def admin_panel():
         if username == 'Samarth Jadhav':
             if password == 'Samarth@123':
                 win.destroy()
-                import csv
-                import tkinter
                 root = tkinter.Tk()
                 root.title("Student Details")
                 root.configure(background='grey80')
